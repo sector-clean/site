@@ -1,0 +1,531 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+
+    color: white;
+}
+
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    margin: 0;
+
+    background-color: #3249C3;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+}
+
+/*  Header  */
+
+header {
+    margin: 0 40px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 23px 0 15px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.logo {
+    width: 189px;
+    height: auto;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule {
+    margin-right: 27px;
+}
+
+.schedule p {
+    display: inline-block;
+
+    align-self: flex-end;
+
+    margin-bottom: 3px;
+
+    position: relative;
+
+    font-size: 15px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.schedule p:before {
+    content: "";
+
+    width: 18px;
+    height: 18px;
+
+    position: absolute;
+
+    top: 0;
+    left: -25px;
+
+    background-image: url("./images/clock-icon.svg");
+}
+
+.schedule span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.info .btn-container a {
+    transition: color .2s linear;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.info .btn-container a:hover {
+    color: #9FE64B;
+}
+
+.info .btn-container a:first-of-type {
+    margin-bottom: 4px;
+}
+
+/*  Main  */
+
+main {
+    flex: 1;
+}
+
+main .overflow {
+    height: 100%;
+
+    overflow: hidden;
+}
+
+main .container {
+    display: flex;
+
+    margin-top: 75px;
+    padding: 0 40px;
+}
+
+main .half {
+    width: 50%;
+
+    position: relative;
+}
+
+main .housekeeper {
+    width: 661px;
+    height: auto;
+
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    z-index: 1;
+}
+
+main .discount {
+    width: 145px;
+    height: auto;
+
+    position: absolute;
+
+    top: 96px;
+    left: 118px;
+
+    animation: pulse 1.5s linear infinite forwards;
+}
+
+@keyframes pulse {
+    from, to {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+h1 {
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+main .title {
+    margin-top: 15px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 300;
+}
+
+main p {
+    margin-top: 55px;
+
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+main .btn-container {
+    display: flex;
+
+    margin-top: 40px;
+}
+
+main .btn-container a {
+    display: flex;
+    align-items: center;
+
+    padding: 17px 20px;
+
+    border-radius: 12px;
+    border-top: 3px solid #99F864;
+
+    transition: background-color .2s linear;
+
+    background-color: #76D10B;
+    box-shadow: 0 16px 44px #00199B;
+    
+    font-size: 23px;
+    font-weight: 500;
+}
+
+main .btn-container a:hover {
+    background-color: #8AE320;
+}
+
+main .btn-container a:hover .icon-fill {
+    fill: white;
+}
+
+.icon-fill {
+    transition: fill .2s linear;
+}
+
+main .btn-container a span {
+    margin-left: 20px;
+}
+
+main .btn-container a + a {
+    margin-left: 42px;
+}
+
+main .sale {
+    margin: 30px 0 80px;
+
+    font-size: 14px;
+    color: #788CF4;
+}
+
+/*  Footer  */
+
+footer {
+    margin: auto 40px 0;
+
+    position: relative;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1230px;
+
+    padding-bottom: 20px;
+
+    position: relative;
+
+    background-color: #fff;
+
+    color: #233DC4;
+
+    z-index: 2;
+}
+
+footer .half {
+    display: flex;
+    flex-direction: column;
+}
+
+footer:before,
+footer:after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    background-repeat: no-repeat;
+
+    z-index: 1;
+}
+
+footer:before {
+    left: -260px;
+
+    width: 764px;
+    height: 128px;
+
+    background-image: url("./images/left-bubble.svg");
+}
+
+footer:after {
+    right: -260px;
+
+    width: 764px;
+    height: 134px;
+
+    background-image: url("./images/right-bubble.svg");
+}
+
+footer .half span {
+    font-size: 11px;
+}
+
+footer .half span:first-of-type {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container-mobile {
+    display: none;
+}
+
+@media screen and (min-width: 1600px){
+    footer {
+        width: 100%;
+        max-width: 1500px;
+
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    main .container {
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 60px;
+
+        text-align: center;
+    }
+    main .half {
+        width: 100%;
+        max-width: 720px;
+    }
+    main .half:last-of-type {
+        min-height: 500px;
+    }
+    h1 {
+        font-size: 64px;
+    }
+    main .title {
+        margin-top: 30px;
+
+        font-size: 30px;
+    }
+    main p {
+        margin-top: 70px;
+
+        font-size: 23px;
+    }
+    main .sale {
+        margin-bottom: 40px;
+    }
+    main .housekeeper {
+        width: 600px;
+
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+    main .btn-container {
+        justify-content: center;
+    }
+    main .btn-container a {
+        padding: 17px 35px;
+    }
+    main .btn-container a span {
+        font-size: 26px;
+    }
+    footer:before {
+        left: -360px;
+    }
+    footer:after {
+        right: -360px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        margin: 0 20px;
+    }
+    main .container {
+        padding: 0 20px;
+    }
+    footer {
+        margin: 0 20px;
+    }
+    footer:after {
+        content: none;
+    }
+    footer:before {
+        width: 452px;
+        height: 85px;
+
+        top: auto;
+        left: 50%;
+        bottom: 0;
+        right: auto;
+
+        transform: translateX(-50%);
+
+        background-image: url("./images/mobile-bubble.svg");
+    }
+    footer .half {
+        display: none;
+    }
+    footer .container {
+        padding-bottom: 15px;
+
+        background-color: transparent;
+    }
+    footer .container-mobile {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    footer .container-mobile span:first-of-type {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+
+    footer .container-mobile span {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    header .logo {
+        width: 120px;
+    }
+    header .container {
+        padding: 15px 0 10px;
+    }
+    header .schedule {
+        margin-right: 0;
+    }
+    .schedule p {
+        font-size: 13px;
+    }
+    .schedule span {
+        font-size: 9px;
+    }
+    header .btn-container {
+        display: none;
+    }
+    main .container {
+        margin-top: 35px;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    main .title {
+        margin-top: 12px;
+
+        font-size: 17px;
+        line-height: 24px;
+    }
+    main p:not(.sale) {
+        display: none;
+    }
+    main .sale {
+        margin-bottom: 20px;
+
+        font-size: 12px;
+    }
+    main .btn-container {
+        flex-direction: column;
+
+        margin-top: 30px;
+    }
+    main .btn-container a {
+        padding: 15px 25px;
+
+        align-self: center;
+    }
+    main .btn-container a + a {
+        margin: 20px 0 0;
+    }
+    main .half:last-of-type {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+
+        min-height: 280px;
+    }
+    main .housekeeper {
+        width: 320px;
+    }
+    main .discount {
+        width: 80px;
+        height: auto;
+
+        margin: 35px 170px 0 0;
+
+        position: static;
+    }
+    footer:before {
+        width: 362px;
+        height: 68px;
+    }
+}
